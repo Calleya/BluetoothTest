@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WriteDataViewController">
+            <connections>
+                <outlet property="connectedStatus" destination="3FJ-f4-Y8j" id="0g3-Kv-UIc"/>
+                <outlet property="uuidStringLabel" destination="Y5w-CP-kSJ" id="Y8l-me-5Td"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="writeDataButton" destination="D8X-PJ-RUe" id="hOP-f7-GBb"/>
+                <outlet property="writeOrderTableView" destination="uPo-dE-c5F" id="ePa-LS-2IE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-CP-kSJ">
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-f4-Y8j">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-PJ-RUe">
+                    <state key="normal" title="write new value"/>
+                    <connections>
+                        <action selector="writeDataToDevice:" destination="-1" eventType="touchUpInside" id="tl0-bC-ihE"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPo-dE-c5F">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7lZ-5I-eA5"/>
+                        <outlet property="delegate" destination="-1" id="Z30-1A-nVK"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D8X-PJ-RUe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2mW-XO-RlE"/>
+                <constraint firstAttribute="trailing" secondItem="Y5w-CP-kSJ" secondAttribute="trailing" constant="20" id="GWq-oi-MkK"/>
+                <constraint firstAttribute="trailing" secondItem="D8X-PJ-RUe" secondAttribute="trailing" id="PQl-3m-fZQ"/>
+                <constraint firstItem="3FJ-f4-Y8j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Umd-Zo-oXO"/>
+                <constraint firstItem="D8X-PJ-RUe" firstAttribute="top" secondItem="3FJ-f4-Y8j" secondAttribute="bottom" constant="20" id="VIn-jP-TRw"/>
+                <constraint firstItem="Y5w-CP-kSJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Y2r-dh-b1j"/>
+                <constraint firstItem="uPo-dE-c5F" firstAttribute="top" secondItem="D8X-PJ-RUe" secondAttribute="bottom" constant="10" id="c8G-3G-SST"/>
+                <constraint firstItem="Y5w-CP-kSJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="f50-jC-Un0"/>
+                <constraint firstItem="uPo-dE-c5F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hOq-eH-mJ2"/>
+                <constraint firstAttribute="trailing" secondItem="uPo-dE-c5F" secondAttribute="trailing" id="hPh-7F-Npw"/>
+                <constraint firstItem="3FJ-f4-Y8j" firstAttribute="top" secondItem="Y5w-CP-kSJ" secondAttribute="bottom" constant="10" id="kTK-pg-HXm"/>
+                <constraint firstAttribute="bottom" secondItem="uPo-dE-c5F" secondAttribute="bottom" id="zKj-G9-N5u"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

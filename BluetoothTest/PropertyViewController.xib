@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertyViewController">
+            <connections>
+                <outlet property="statusLabel" destination="O5g-9N-niY" id="gGh-EQ-3OJ"/>
+                <outlet property="tableView" destination="q5Q-Qx-JoM" id="5o4-J5-nFA"/>
+                <outlet property="uuidLabel" destination="neT-1T-DIR" id="oA0-jC-SkR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neT-1T-DIR">
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5g-9N-niY">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="q5Q-Qx-JoM">
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jpD-QS-dtX"/>
+                        <outlet property="delegate" destination="-1" id="D5O-zG-plJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="O5g-9N-niY" firstAttribute="top" secondItem="neT-1T-DIR" secondAttribute="bottom" constant="20" id="1J0-DK-Ozf"/>
+                <constraint firstAttribute="trailing" secondItem="neT-1T-DIR" secondAttribute="trailing" constant="20" id="EJQ-7l-HSg"/>
+                <constraint firstItem="neT-1T-DIR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Mxf-RQ-XlH"/>
+                <constraint firstItem="q5Q-Qx-JoM" firstAttribute="top" secondItem="O5g-9N-niY" secondAttribute="bottom" constant="20" id="byr-pG-rgH"/>
+                <constraint firstAttribute="bottom" secondItem="q5Q-Qx-JoM" secondAttribute="bottom" id="hQ1-da-1jq"/>
+                <constraint firstItem="q5Q-Qx-JoM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m7c-V0-HSU"/>
+                <constraint firstItem="neT-1T-DIR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="rYJ-Ne-VC6"/>
+                <constraint firstAttribute="trailing" secondItem="q5Q-Qx-JoM" secondAttribute="trailing" id="vJ7-16-0SI"/>
+                <constraint firstItem="O5g-9N-niY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="xsv-A4-gyb"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
